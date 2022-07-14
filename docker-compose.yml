@@ -22,7 +22,7 @@ services:
   orion:
     labels:
       org.fiware: 'tutorial'
-    image: fiware/orion:${ORION_VERSION}
+    image: fiware/orion:latest
     hostname: orion
     container_name: fiware-orion
     depends_on:
@@ -80,7 +80,7 @@ services:
     expose:
       - "27017"
     ports:
-      - "$27017:27017" # localhost:27017 # localhost:27017
+      - "27017:27017" # localhost:27017 # localhost:27017
     networks:
       - default
     volumes:
